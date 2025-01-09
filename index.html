@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto desarrollado en ONE</title>
+    <!-- Enlace al favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Kit de font awesome -->
+    <script src="https://kit.fontawesome.com/2a41090a52.js" crossorigin="anonymous"></script>
+    <!-- Styles.css -->
+	<link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Sweet Alerts -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <div class="header__left">
+                    <a href="https://www.aluracursos.com/" class="header__logo" target="_blank"><img src="img/alura-latam.png"></a>
+                    <h1 class="header__title">Encriptador de texto</h1>
+                </div>
+                <ul class="header__right">
+                    <li><a class="header__link" href="https://orion-protocol.vercel.app/" target="_blank"><i class="fa-solid fa-pen-nib"></i> Mi Blog</a></li>
+                    <li><a class="header__link" href="https://github.com/fullbuster-t/" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+	</header>
+    <main class="main">
+        <div class="container">
+            <div class="main__functions">
+                <div class="main__encrypt">
+                    <textarea name="main__text" id="main__text" class="main__text" placeholder="Ingresa el texto que deseas encriptar"></textarea>
+                    <div class="main__announcement">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <p> Solo se aceptan letras minúsculas sin carácteres especiales</p>
+                    </div>
+                    <div class="main__buttons">
+                        <button class="main__btn-encrypt" type="button" onclick="encrypt()">Encriptar</button>
+                        <button class="main__btn-decrypt" type="button" onclick="decrypt()">Desencriptar</button>
+                        <button class="main__btn-clear" type="button" onclick="resetViews()"><i class="fa-solid fa-eraser"></i></button>
+                    </div>
+                </div>
+                <div class="main__encrypted" id="main__encrypted">
+                    <p class="main__enc" id="main__enc"></p>
+                    <div alt="" id="main__image">
+                        <img src="img/search.png" class="main__image">
+                    </div>
+                    <div class="main__message-encrypt" id="main__message-encrypt">
+                        <h4 id="main__message-title">Ningún mensaje encontrado</h4>
+                        <p id="main__message-paragraph">Ingresa el texto que deseas encriptar o desencriptar</p
+                    </div>
+                </div>
+                <button class="main__btn-copy" id="main__btn-copy" type="button" onclick="copy()">Copiar</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__credits">
+                <div class="footer__dev">
+                    <p class="footer__paragraph">Desarrollado por Joaquin Martinez</p>
+                    <!--<div class="footer__social">
+                        <a href="https://www.instagram.com/fullbuster_softdev/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/fu11buster_dev" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>-->
+                </div>
+                <div class="footer__img"><img src="img/ONE.png" alt="" id="footer__logo" class="footer__logo"></div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+</html>
